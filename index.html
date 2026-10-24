@@ -1,1 +1,347 @@
 
+<!DOCTYPE html><html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="İşletmeniz için kolayca modern, mobil uyumlu bir internet sitesi hazırlayın.">
+  <title>Site Kurucu | İşletmeniz İçin Web Sitesi</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #14213d;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --white: #fff;
+      --green: #16a34a;
+    }* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--white);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  margin-left: 14px;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px 50px;
+  background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+}
+
+.badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 13px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 54px);
+  line-height: 1.15;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 25px;
+  font-size: 17px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover { opacity: .9; }
+
+.section {
+  max-width: 1050px;
+  margin: auto;
+  padding: 45px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--muted);
+  margin: 0 auto 28px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, .04);
+}
+
+.card-icon { font-size: 30px; }
+
+.card h3 { margin-bottom: 7px; }
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.builder {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 25px;
+  border-radius: 18px;
+  max-width: 700px;
+  margin: 25px auto;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, .05);
+}
+
+label {
+  display: block;
+  margin: 15px 0 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font: inherit;
+  background: white;
+}
+
+textarea { min-height: 90px; resize: vertical; }
+
+.builder .button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#preview {
+  display: none;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  margin-top: 25px;
+  border: 2px solid #bfdbfe;
+  overflow-wrap: anywhere;
+}
+
+#preview h3 { color: var(--primary); }
+
+.preview-contact {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 14px;
+}
+
+footer p { margin: 5px; }
+
+@media (max-width: 520px) {
+  header { justify-content: center; }
+  nav { text-align: center; }
+  nav a { margin: 0 6px; }
+  .hero { padding-top: 45px; }
+  .builder { padding: 18px; }
+}
+
+  </style>
+</head>
+<body><header>
+  <div class="logo">✦ Site Kurucu</div>
+  <nav>
+    <a href="#ozellikler">Özellikler</a>
+    <a href="#sablonlar">Şablonlar</a>
+    <a href="#olustur">Site Oluştur</a>
+  </nav>
+</header><main>
+  <section class="hero">
+    <span class="badge">Türkiye'deki işletmeler için</span>
+    <h1>İşletmenizin internet sitesi, kolayca hazır!</h1>
+    <p>
+      Kod yazmadan işletmenizi internete taşıyın.
+      Bilgilerinizi girin, ilk web sitesi taslağınızı hemen oluşturun.
+    </p>
+    <a class="button" href="#olustur">Ücretsiz Başla →</a>
+  </section>  <section class="section" id="ozellikler">
+    <h2>Neden Site Kurucu?</h2>
+    <p class="section-intro">İşletmeniz için gereken temel araçlar tek yerde.</p><div class="cards">
+  <article class="card">
+    <div class="card-icon">⚡</div>
+    <h3>Kolay kullanım</h3>
+    <p>Teknik bilgi gerektirmeyen, anlaşılır bir site hazırlama deneyimi.</p>
+  </article>
+
+  <article class="card">
+    <div class="card-icon">📱</div>
+    <h3>Mobil uyumlu</h3>
+    <p>Telefon, tablet ve bilgisayarlara uyum sağlayan tasarım.</p>
+  </article>
+
+  <article class="card">
+    <div class="card-icon">💬</div>
+    <h3>WhatsApp iletişimi</h3>
+    <p>Müşterilerinizin işletmenizle kolayca iletişim kurmasına yardımcı olun.</p>
+  </article>
+</div>
+
+  </section>  <section class="section" id="sablonlar">
+    <h2>Her işletmeye uygun</h2>
+    <p class="section-intro">Başlangıç için işletme türünüzü seçin.</p><div class="cards">
+  <article class="card">
+    <div class="card-icon">🏠</div>
+    <h3>Emlak</h3>
+    <p>Emlak ofisleri ve gayrimenkul danışmanları.</p>
+  </article>
+
+  <article class="card">
+    <div class="card-icon">☕</div>
+    <h3>Kafe ve restoran</h3>
+    <p>Menü, adres ve iletişim bilgilerini tanıtın.</p>
+  </article>
+
+  <article class="card">
+    <div class="card-icon">🛍️</div>
+    <h3>Küçük işletme</h3>
+    <p>Ürünlerinizi ve hizmetlerinizi müşterilerinize gösterin.</p>
+  </article>
+</div>
+
+  </section>  <section class="section" id="olustur">
+    <h2>İlk site taslağınızı oluşturun</h2>
+    <p class="section-intro">Bilgilerinizi girin ve örnek sayfanızı görüntüleyin.</p><div class="builder">
+  <form id="siteForm">
+    <label for="businessType">İşletme türü</label>
+    <select id="businessType" required>
+      <option value="İşletme">Diğer işletme</option>
+      <option value="Emlak Ofisi">Emlak ofisi</option>
+      <option value="Kafe ve Restoran">Kafe veya restoran</option>
+      <option value="Kuaför ve Güzellik Salonu">Kuaför veya güzellik salonu</option>
+      <option value="Eğitim Kurumu">Eğitim kurumu</option>
+      <option value="Serbest Meslek">Serbest meslek</option>
+    </select>
+
+    <label for="businessName">İşletmenizin adı</label>
+    <input id="businessName" type="text" placeholder="Örn. Mavi Emlak" required>
+
+    <label for="services">Hizmetleriniz</label>
+    <textarea id="services" placeholder="Hangi ürünleri veya hizmetleri sunuyorsunuz?" required></textarea>
+
+    <label for="phone">Telefon numaranız</label>
+    <input id="phone" type="tel" placeholder="05XXXXXXXXX" required>
+
+    <label for="city">Şehir</label>
+    <input id="city" type="text" placeholder="Örn. Muğla" required>
+
+    <button class="button" type="submit">Site Taslağımı Oluştur →</button>
+  </form>
+
+  <div id="preview" aria-live="polite">
+    <h3 id="previewName"></h3>
+    <p id="previewType"></p>
+    <p id="previewServices"></p>
+    <p id="previewCity"></p>
+    <a id="previewContact" class="preview-contact" href="#">WhatsApp ile İletişim</a>
+    <p><small>Bu bir önizlemedir. Henüz bağımsız bir internet sitesi olarak yayınlanmamıştır.</small></p>
+  </div>
+</div>
+
+  </section>
+</main><footer>
+  <p><strong>Site Kurucu</strong> — İşletmenizi dijital dünyaya taşıyın.</p>
+  <p>İlk sürüm · Geliştirme aşamasında</p>
+</footer><script>
+  const form = document.getElementById("siteForm");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const type = document.getElementById("businessType").value;
+    const name = document.getElementById("businessName").value.trim();
+    const services = document.getElementById("services").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const city = document.getElementById("city").value.trim();
+
+    document.getElementById("previewName").textContent = name;
+    document.getElementById("previewType").textContent = type;
+    document.getElementById("previewServices").textContent = services;
+    document.getElementById("previewCity").textContent = "📍 " + city;
+
+    const digits = phone.replace(/\D/g, "");
+    const whatsappNumber = digits.startsWith("0") ? "90" + digits.slice(1) : digits;
+    const contact = document.getElementById("previewContact");
+
+    contact.href = "https://wa.me/" + whatsappNumber;
+    contact.target = "_blank";
+    contact.rel = "noopener noreferrer";
+
+    document.getElementById("preview").style.display = "block";
+    document.getElementById("preview").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+</script></body>
+</html>
