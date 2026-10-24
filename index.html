@@ -1,347 +1,280 @@
 
-<!DOCTYPE html><html lang="tr">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f8fafc">
-  <meta name="description" content="İşletmeniz için kolayca modern, mobil uyumlu bir internet sitesi hazırlayın.">
-  <title>Site Kurucu | İşletmeniz İçin Web Sitesi</title>
-  <style>
-    :root {
-      --primary: #2563eb;
-      --dark: #14213d;
-      --muted: #64748b;
-      --bg: #f8fafc;
-      --white: #fff;
-      --green: #16a34a;
-    }* { box-sizing: border-box; }
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Özben Emlak - Muğla'da satılık ve kiralık daireler, arsalar ve gayrimenkul danışmanlığı.">
+<title>Özben Emlak | Muğla Gayrimenkul</title>
+<style>
+:root {
+  --navy: #172b4d;
+  --blue: #315b91;
+  --muted: #64748b;
+  --line: #e5eaf0;
+  --bg: #f7f9fc;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--dark);
+  font-family: Arial, sans-serif;
+  color: var(--navy);
+  background: white;
   line-height: 1.6;
 }
-
+a { color: inherit; text-decoration: none; }
 header {
-  background: var(--white);
-  border-bottom: 1px solid #e2e8f0;
-  padding: 15px 5%;
+  background: white;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.logo { font-size: 23px; font-weight: 800; }
+.logo span { color: var(--blue); }
+nav { display: flex; gap: 20px; flex-wrap: wrap; }
+nav a { font-size: 14px; font-weight: 600; }
+nav a:hover { color: var(--blue); }
+.hero {
+  padding: 65px 5%;
+  background: linear-gradient(110deg,#f7f9fc,#edf3fa);
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 35px;
+}
+.eyebrow {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+h1 { font-size: clamp(34px,5vw,54px); line-height: 1.12; margin: 14px 0; }
+.hero p { color: var(--muted); max-width: 520px; }
+.hero img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: var(--navy);
+  color: white;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+}
+.btn-outline {
+  background: white;
+  color: var(--navy);
+  border: 1px solid #cbd5e1;
+}
+.wrap { max-width: 1150px; margin: auto; padding: 48px 20px; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+h2 { font-size: 29px; margin: 0 0 6px; }
+.muted { color: var(--muted); }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+.filters button {
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--navy);
+  border-radius: 30px;
+  padding: 9px 15px;
+  cursor: pointer;
+}
+.filters button.active { background: var(--navy); color: white; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 20px;
+}
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+}
+.card img { width: 100%; height: 205px; object-fit: cover; display: block; }
+.card-body { padding: 17px; }
+.tag {
+  display: inline-block;
+  background: #edf3fa;
+  color: var(--blue);
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.card h3 { margin: 10px 0 5px; font-size: 18px; }
+.price { font-size: 21px; font-weight: 800; margin: 12px 0; }
+.details { font-size: 13px; color: var(--muted); }
+.note { font-size: 12px; color: var(--muted); }
+.about {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 28px;
+}
+.contact {
+  background: var(--navy);
+  color: white;
+  border-radius: 16px;
+  padding: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   flex-wrap: wrap;
 }
-
-.logo {
-  font-size: 21px;
-  font-weight: 800;
-  color: var(--primary);
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--dark);
-  margin-left: 14px;
-  font-size: 14px;
-}
-
-.hero {
-  text-align: center;
-  padding: 65px 20px 50px;
-  background: linear-gradient(135deg, #eff6ff, #f0fdf4);
-}
-
-.badge {
-  display: inline-block;
-  background: #dbeafe;
-  color: #1d4ed8;
-  padding: 6px 13px;
-  border-radius: 30px;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-h1 {
-  font-size: clamp(32px, 6vw, 54px);
-  line-height: 1.15;
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-.hero p {
-  color: var(--muted);
-  max-width: 620px;
-  margin: 0 auto 25px;
-  font-size: 17px;
-}
-
-.button {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 13px 20px;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.button:hover { opacity: .9; }
-
-.section {
-  max-width: 1050px;
-  margin: auto;
-  padding: 45px 20px;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 29px;
-  margin-bottom: 10px;
-}
-
-.section-intro {
-  text-align: center;
-  color: var(--muted);
-  margin: 0 auto 28px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.card {
-  background: var(--white);
-  padding: 24px;
-  border-radius: 16px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 5px 18px rgba(15, 23, 42, .04);
-}
-
-.card-icon { font-size: 30px; }
-
-.card h3 { margin-bottom: 7px; }
-
-.card p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.builder {
-  background: white;
-  border: 1px solid #e2e8f0;
-  padding: 25px;
-  border-radius: 18px;
-  max-width: 700px;
-  margin: 25px auto;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, .05);
-}
-
-label {
-  display: block;
-  margin: 15px 0 6px;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 9px;
-  font: inherit;
-  background: white;
-}
-
-textarea { min-height: 90px; resize: vertical; }
-
-.builder .button {
-  width: 100%;
-  margin-top: 20px;
-}
-
-#preview {
-  display: none;
-  background: white;
-  padding: 25px;
-  border-radius: 14px;
-  margin-top: 25px;
-  border: 2px solid #bfdbfe;
-  overflow-wrap: anywhere;
-}
-
-#preview h3 { color: var(--primary); }
-
-.preview-contact {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: var(--green);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
+.contact p { color: #e2e8f0; }
+.contact .btn { background: white; color: var(--navy); }
 footer {
-  background: var(--dark);
-  color: white;
   text-align: center;
-  padding: 28px 20px;
-  font-size: 14px;
+  padding: 25px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
 }
-
-footer p { margin: 5px; }
-
-@media (max-width: 520px) {
-  header { justify-content: center; }
-  nav { text-align: center; }
-  nav a { margin: 0 6px; }
-  .hero { padding-top: 45px; }
-  .builder { padding: 18px; }
+@media(max-width:760px) {
+  .hero { grid-template-columns: 1fr; padding: 42px 6%; }
+  .hero img { height: 230px; }
+  .grid { grid-template-columns: 1fr; }
+  header { padding: 14px 5%; }
+  nav { gap: 13px; }
+  .wrap { padding: 36px 16px; }
+  h2 { font-size: 25px; }
 }
-
-  </style>
+</style>
 </head>
-<body><header>
-  <div class="logo">✦ Site Kurucu</div>
+<body>
+
+<header>
+  <a class="logo" href="#">ÖZBEN <span>EMLAK</span></a>
   <nav>
-    <a href="#ozellikler">Özellikler</a>
-    <a href="#sablonlar">Şablonlar</a>
-    <a href="#olustur">Site Oluştur</a>
+    <a href="#ilanlar">İlanlar</a>
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#iletisim">İletişim</a>
   </nav>
-</header><main>
-  <section class="hero">
-    <span class="badge">Türkiye'deki işletmeler için</span>
-    <h1>İşletmenizin internet sitesi, kolayca hazır!</h1>
-    <p>
-      Kod yazmadan işletmenizi internete taşıyın.
-      Bilgilerinizi girin, ilk web sitesi taslağınızı hemen oluşturun.
-    </p>
-    <a class="button" href="#olustur">Ücretsiz Başla →</a>
-  </section>  <section class="section" id="ozellikler">
-    <h2>Neden Site Kurucu?</h2>
-    <p class="section-intro">İşletmeniz için gereken temel araçlar tek yerde.</p><div class="cards">
-  <article class="card">
-    <div class="card-icon">⚡</div>
-    <h3>Kolay kullanım</h3>
-    <p>Teknik bilgi gerektirmeyen, anlaşılır bir site hazırlama deneyimi.</p>
-  </article>
+</header>
 
-  <article class="card">
-    <div class="card-icon">📱</div>
-    <h3>Mobil uyumlu</h3>
-    <p>Telefon, tablet ve bilgisayarlara uyum sağlayan tasarım.</p>
-  </article>
-
-  <article class="card">
-    <div class="card-icon">💬</div>
-    <h3>WhatsApp iletişimi</h3>
-    <p>Müşterilerinizin işletmenizle kolayca iletişim kurmasına yardımcı olun.</p>
-  </article>
-</div>
-
-  </section>  <section class="section" id="sablonlar">
-    <h2>Her işletmeye uygun</h2>
-    <p class="section-intro">Başlangıç için işletme türünüzü seçin.</p><div class="cards">
-  <article class="card">
-    <div class="card-icon">🏠</div>
-    <h3>Emlak</h3>
-    <p>Emlak ofisleri ve gayrimenkul danışmanları.</p>
-  </article>
-
-  <article class="card">
-    <div class="card-icon">☕</div>
-    <h3>Kafe ve restoran</h3>
-    <p>Menü, adres ve iletişim bilgilerini tanıtın.</p>
-  </article>
-
-  <article class="card">
-    <div class="card-icon">🛍️</div>
-    <h3>Küçük işletme</h3>
-    <p>Ürünlerinizi ve hizmetlerinizi müşterilerinize gösterin.</p>
-  </article>
-</div>
-
-  </section>  <section class="section" id="olustur">
-    <h2>İlk site taslağınızı oluşturun</h2>
-    <p class="section-intro">Bilgilerinizi girin ve örnek sayfanızı görüntüleyin.</p><div class="builder">
-  <form id="siteForm">
-    <label for="businessType">İşletme türü</label>
-    <select id="businessType" required>
-      <option value="İşletme">Diğer işletme</option>
-      <option value="Emlak Ofisi">Emlak ofisi</option>
-      <option value="Kafe ve Restoran">Kafe veya restoran</option>
-      <option value="Kuaför ve Güzellik Salonu">Kuaför veya güzellik salonu</option>
-      <option value="Eğitim Kurumu">Eğitim kurumu</option>
-      <option value="Serbest Meslek">Serbest meslek</option>
-    </select>
-
-    <label for="businessName">İşletmenizin adı</label>
-    <input id="businessName" type="text" placeholder="Örn. Mavi Emlak" required>
-
-    <label for="services">Hizmetleriniz</label>
-    <textarea id="services" placeholder="Hangi ürünleri veya hizmetleri sunuyorsunuz?" required></textarea>
-
-    <label for="phone">Telefon numaranız</label>
-    <input id="phone" type="tel" placeholder="05XXXXXXXXX" required>
-
-    <label for="city">Şehir</label>
-    <input id="city" type="text" placeholder="Örn. Muğla" required>
-
-    <button class="button" type="submit">Site Taslağımı Oluştur →</button>
-  </form>
-
-  <div id="preview" aria-live="polite">
-    <h3 id="previewName"></h3>
-    <p id="previewType"></p>
-    <p id="previewServices"></p>
-    <p id="previewCity"></p>
-    <a id="previewContact" class="preview-contact" href="#">WhatsApp ile İletişim</a>
-    <p><small>Bu bir önizlemedir. Henüz bağımsız bir internet sitesi olarak yayınlanmamıştır.</small></p>
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">Muğla gayrimenkul danışmanlığı</div>
+    <h1>Size uygun evi birlikte bulalım.</h1>
+    <p>Satılık ve kiralık daireler, arsalar ve gayrimenkul seçenekleri için Özben Emlak ile arayışınıza başlayın.</p>
+    <a class="btn" href="#ilanlar">İlanları İncele →</a>
+    <a class="btn btn-outline" href="#iletisim">Bize Ulaşın</a>
   </div>
-</div>
+  <img src="https://images.unsplash.com/photo-160059 in" alt="Gayrimenkul örnek görseli" onerror="this.style.display='none'">
+</section>
 
-  </section>
-</main><footer>
-  <p><strong>Site Kurucu</strong> — İşletmenizi dijital dünyaya taşıyın.</p>
-  <p>İlk sürüm · Geliştirme aşamasında</p>
-</footer><script>
-  const form = document.getElementById("siteForm");
+<section class="wrap" id="ilanlar">
+  <div class="section-head">
+    <div>
+      <h2>Gayrimenkul İlanları</h2>
+      <div class="muted">Satılık, kiralık daireler ve arsalar</div>
+    </div>
+  </div>
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
+  <div class="filters">
+    <button class="active" data-filter="all">Tüm İlanlar</button>
+    <button data-filter="satilik">Satılık</button>
+    <button data-filter="kiralik">Kiralık</button>
+    <button data-filter="daire">Daire</button>
+    <button data-filter="arsa">Arsa</button>
+  </div>
 
-    const type = document.getElementById("businessType").value;
-    const name = document.getElementById("businessName").value.trim();
-    const services = document.getElementById("services").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const city = document.getElementById("city").value.trim();
+  <div class="grid" id="listings">
+    <article class="card" data-kind="satilik daire">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Örnek müstakil ev">
+      <div class="card-body">
+        <span class="tag">SATILIK · ÖRNEK</span>
+        <h3>Modern Konut</h3>
+        <div class="details">📍 Muğla · Örnek ilan</div>
+        <div class="price">Fiyat bilgisi alın</div>
+        <p class="note">Bu kart tanıtım amaçlıdır; gerçek ilan değildir.</p>
+      </div>
+    </article>
 
-    document.getElementById("previewName").textContent = name;
-    document.getElementById("previewType").textContent = type;
-    document.getElementById("previewServices").textContent = services;
-    document.getElementById("previewCity").textContent = "📍 " + city;
+    <article class="card" data-kind="kiralik daire">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Örnek daire iç mekânı">
+      <div class="card-body">
+        <span class="tag">KİRALIK · ÖRNEK</span>
+        <h3>Aydınlık Daire</h3>
+        <div class="details">📍 Muğla · Örnek ilan</div>
+        <div class="price">Fiyat bilgisi alın</div>
+        <p class="note">Bu kart tanıtım amaçlıdır; gerçek ilan değildir.</p>
+      </div>
+    </article>
 
-    const digits = phone.replace(/\D/g, "");
-    const whatsappNumber = digits.startsWith("0") ? "90" + digits.slice(1) : digits;
-    const contact = document.getElementById("previewContact");
+    <article class="card" data-kind="satilik arsa">
+      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Örnek arsa ve arazi">
+      <div class="card-body">
+        <span class="tag">ARSA · ÖRNEK</span>
+        <h3>Arsa ve Arazi</h3>
+        <div class="details">📍 Muğla · Örnek ilan</div>
+        <div class="price">Detaylı bilgi alın</div>
+        <p class="note">Bu kart tanıtım amaçlıdır; gerçek ilan değildir.</p>
+      </div>
+    </article>
+  </div>
+</section>
 
-    contact.href = "https://wa.me/" + whatsappNumber;
-    contact.target = "_blank";
-    contact.rel = "noopener noreferrer";
+<section class="wrap" id="hakkimizda">
+  <div class="about">
+    <h2>Özben Emlak Hakkında</h2>
+    <p class="muted">Muğla'da satılık ve kiralık daireler ile arsa seçenekleri için bizimle iletişime geçebilirsiniz. İhtiyacınıza uygun gayrimenkulü bulmanız için size yardımcı olmayı amaçlıyoruz.</p>
+  </div>
+</section>
 
-    document.getElementById("preview").style.display = "block";
-    document.getElementById("preview").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
+<section class="wrap" id="iletisim">
+  <div class="contact">
+    <div>
+      <h2>Gayrimenkul mü arıyorsunuz?</h2>
+      <p>İhtiyacınızı konuşmak için Özben Emlak ile iletişime geçin.</p>
+      <p>📍 Muğla</p>
+    </div>
+    <a class="btn" id="whatsapp" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp ile İletişim</a>
+  </div>
+  <p class="note">WhatsApp düğmesini kullanmadan önce gerçek işletme telefon numarası eklenmelidir.</p>
+</section>
+</main>
+
+<footer>
+  <strong>Özben Emlak</strong> · Muğla<br>
+  © <span id="year"></span> Tüm hakları saklıdır.
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.querySelectorAll("[data-filter]").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("[data-filter]").forEach(b => b.classList.remove("active"));
+    button.classList.add("active");
+    const filter = button.dataset.filter;
+    document.querySelectorAll("#listings .card").forEach(card => {
+      const kinds = card.dataset.kind.split(" ");
+      card.style.display = filter === "all" || kinds.includes(filter) ? "" : "none";
     });
   });
-</script></body>
+});
+</script>
+</body>
 </html>
